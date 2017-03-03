@@ -1,0 +1,1 @@
+mpirun -hostfile hostfile -np 9 ./lab1 $1 $2 $3
