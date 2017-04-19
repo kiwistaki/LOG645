@@ -17,9 +17,9 @@ __kernel void HeatDynamicTransfer(__global double *matrixParInit, __global doubl
 		// Find value and neighbors
 		double value = matrixParInit[i*m + j];
 		double left_neighbor = matrixParInit[i*m + (j - 1)];
-		double top_neighbor = matrixParInit[(i + 1)*m + j)];
+		double top_neighbor = matrixParInit[(i + 1)*m + j];
 		double right_neighbor = matrixParInit[i*m + (j + 1)];
-		double bottom_neighbor = matrixParInit[(i - 1)*m + j)];
+		double bottom_neighbor = matrixParInit[(i - 1)*m + j];
 
 		// Calculate coefficients (mostly for debug purposes)
 		double coeff_val = 1 - ((4 * td) / (h*h));
